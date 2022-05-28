@@ -1,0 +1,155 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #c5e4e7;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Space Mono", monospace;
+  padding: 0 4rem;
+}
+main {
+  min-width: 60%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 15px;
+}
+.calc-side {
+  width: 100%;
+  margin: 1rem;
+}
+.result {
+  width: 97%;
+  background: hsl(183, 100%, 15%);
+  margin: 1.3rem auto;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.tip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.tip {
+  width: 100%;
+  padding: 10px 1rem;
+  text-align: center;
+  background: hsl(183, 100%, 15%);
+  border-radius: 3px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+.tip:hover {
+  background: hsl(185, 21%, 69%);
+  color: black;
+}
+.active-input {
+  font-weight: 800;
+  background: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
+}
+
+.active-input:focus,
+.active-input:hover {
+  background: hsl(185, 41%, 84%);
+}
+.input {
+  width: 100%;
+  height: 3rem;
+  font-family: "Space Mono", monospace;
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-align: right;
+  background: hsl(185, 41%, 84%);
+  border-radius: 3px;
+  padding: 5px;
+}
+.label-container {
+  position: relative;
+}
+svg {
+  position: absolute;
+  top: 16px;
+  left: 10px;
+  font-size: 1.2rem;
+  color: hsl(187, 27%, 47%);
+}
+input {
+  border: none;
+}
+.tip-amount,
+.tip-total {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+h2 {
+  font-size: 2.5rem;
+  color: hsl(184, 14%, 56%);
+}
+.per-person {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: hsl(189, 41%, 97%);
+}
+.per-person::after {
+  content: "/person";
+  display: block;
+  font-size: 1rem;
+  color: hsl(184, 14%, 56%);
+}
+a {
+  display: block;
+  margin: 4rem auto 1rem;
+  padding: 10px 5rem;
+  background: hsl(184, 14%, 56%);
+  text-decoration: none;
+  color: hsl(183, 95%, 22%);
+  text-align: center;
+  font-size: large;
+  font-weight: 700;
+  border-radius: 5px;
+}
+a:hover {
+  background: hsl(185, 41%, 84%);
+  color: hsl(0, 0%, 0%);
+}
+h4,
+h3 {
+  margin: 10px 0;
+}
+.logo {
+  position: absolute;
+  top: 10%;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+/* screen  */
+@media screen and (max-width: 750px) {
+  body {
+    padding: 0 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  main {
+    flex-direction: column;
+  }
+  .logo {
+    display: none;
+  }
+  .calc-side {
+    padding: 0 10px;
+  }
+}
